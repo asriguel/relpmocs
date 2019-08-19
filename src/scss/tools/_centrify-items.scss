@@ -1,0 +1,9 @@
+// -----------------------------------------------------------------------------
+//  Tools > Centrify items
+// -----------------------------------------------------------------------------
+
+@mixin centerify-items() {
+  align-items: center;
+  display: inline-flex;
+  justify-content: center;
+}

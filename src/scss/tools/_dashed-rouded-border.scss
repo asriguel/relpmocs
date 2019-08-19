@@ -1,0 +1,20 @@
+// -----------------------------------------------------------------------------
+//  Tools > Dashed rouded border
+// -----------------------------------------------------------------------------
+
+@mixin dashed-rouded-border($stroke-length, $stroke-space, $stroke-color, $stroke-width: 1) {
+  svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+  }
+
+  rect {
+    fill: none;
+    stroke: $stroke-color;
+    stroke-width: $stroke-width;
+    stroke-dasharray: $stroke-length, $stroke-space;
+  }
+}

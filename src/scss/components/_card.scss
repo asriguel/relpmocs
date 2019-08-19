@@ -1,0 +1,144 @@
+// -----------------------------------------------------------------------------
+//  Components > Card
+// -----------------------------------------------------------------------------
+
+.card {
+  background-color: $c-card-bg;
+  border-radius: 3px;
+  border: 1px solid $c-card-border;
+  height: 143px;
+  position: relative;
+  transition: box-shadow $t-card-shadow ease-in;
+
+  &:hover {
+    border: 1px solid transparent;
+    box-shadow: 0 5px 15px $c-card-shadow;
+  }
+
+  &__body {
+    @include clearfix();
+
+    padding: 20px 16px 8px;
+  }
+
+  &__footer {
+    border-top: 1px solid $c-card-footer-border;
+    box-sizing: border-box;
+    padding: 10px 16px;
+  }
+
+  &__img {
+    @include centerify-items();
+
+    background-color: $c-card-image;
+    border-radius: 50%;
+    clear: left;
+    color: $c-card-image-icon;
+    float: left;
+    font-size: $font-size-1;
+    height: 48px;
+    overflow: hidden;
+    width: 48px;
+
+    img {
+      @include image-fit(cover);
+    }
+  }
+
+  &__field {
+    display: inline-block;
+    float: left;
+    margin-bottom: 4px;
+    padding-left: 16px;
+    width: calc(100% - 64px);
+  }
+
+  &__title {
+    color: $c-card-title;
+    letter-spacing: -.2px;
+    line-height: 16px;
+    margin-top: 7px;
+    width: 100%;
+
+    &::placeholder {
+      color: $c-card-title;
+    }
+  }
+
+  &__description {
+    color: $c-card-description;
+    font-size: $font-size-3;
+    letter-spacing: -.17px;
+    line-height: 16px;
+    min-height: 36px;
+    overflow: hidden;
+    width: 100%;
+
+    &::placeholder {
+      color: $c-card-description;
+    }
+  }
+
+  &__members-list {
+    font-size: 0;
+    height: 24px;
+    overflow: hidden;
+  }
+
+  &__errors {
+    font-size: $font-size-3;
+    padding: 8px 16px;
+  }
+
+  input {
+    &.card__title {
+      margin-top: 5px;
+    }
+  }
+
+  textarea {
+    &.card__description {
+      margin-top: 2px;
+    }
+  }
+}
+
+.card--empty {
+  @include dashed-rouded-border(4, 2, $c-card-empty-border);
+
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  min-height: 143px;
+  position: relative;
+  transition: stroke $t-global ease-in-out;
+
+  &:hover {
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+
+    rect {
+      stroke-dasharray: none;
+      stroke: $c-card-empty-border-hover;
+    }
+  }
+
+  .card__title {
+    opacity: .5;
+  }
+
+  .card__img {
+    background-color: $c-card-empty-image;
+  }
+}
+
+.card--has-error {
+  border: 1px solid $c-pink;
+
+  &:hover {
+    border: 1px solid $c-pink;
+  }
+}
+
+

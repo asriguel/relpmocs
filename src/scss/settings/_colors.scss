@@ -1,0 +1,72 @@
+// -----------------------------------------------------------------------------
+//  Settings > Colors
+// -----------------------------------------------------------------------------
+//  01. Base colors
+//  02. Page
+//  03. Card
+//  04. Members List
+//  05. Button
+//  06. Errors block
+//  07. Icon circled
+//  08. Hidden elements counter
+//  09. Alert
+// -----------------------------------------------------------------------------
+
+//  01. Base colors
+$c-white: #FFFFFF;
+$c-pink: #D32B68;
+$c-light-gray: #F8F9FB;
+$c-light-gray-2: #E7E9F1;
+$c-gray-1: #BFC6CD;
+$c-gray-2: #787A85;
+$c-dark-blue: #2A3F58;
+$c-black: #000000;
+
+$c-accent: $c-pink;
+$c-text: $c-dark-blue;
+
+//  02. Page
+$c-page-bg: $c-light-gray;
+
+//  03. Card
+$c-card-border: $c-gray-1;
+$c-card-footer-border: rgba($c-gray-1, .5);
+$c-card-bg: $c-white;
+$c-card-title: $c-dark-blue;
+$c-card-description: rgba($c-text, .5);
+$c-card-shadow: rgba($c-black, .1);
+$c-card-empty-border: rgba($c-text, .4);
+$c-card-empty-border-hover: $c-accent;
+$c-card-image: $c-light-gray-2;
+$c-card-image-icon: $c-gray-2;
+$c-card-empty-image: $c-gray-1;
+
+//  04. Members list
+$c-members-list-image-overlay: $c-accent;
+$c-members-list-image-icon: $c-white;
+$c-members-list-name: $c-text;
+$c-members-list-name-checked: $c-accent;
+
+//  05. Button
+$c-button-text: $c-accent;
+$c-button-icon: $c-gray-2;
+$c-button-icon-bg: $c-light-gray-2;
+
+//  06. Errors block
+$c-errors-block: $c-accent;
+
+//  07. Icon circled
+$c-icon-circled-bg: $c-light-gray-2;
+
+//  08. Hidden elements counter
+$c-hidden-elements-counter: $c-dark-blue;
+
+//  09. Alert
+$c-alert-text: $c-white;
+$c-alert-bg: rgba($c-accent, .6);
+$c-alert-border: $c-accent;
+
+
+
+
+

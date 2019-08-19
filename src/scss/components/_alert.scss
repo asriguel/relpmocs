@@ -1,0 +1,12 @@
+// -----------------------------------------------------------------------------
+//  Components > Alert
+// -----------------------------------------------------------------------------
+
+.alert {
+  background-color: $c-alert-bg;
+  border-radius: 3px;
+  border: $c-alert-border;
+  color: $c-alert-text;
+  padding: 16px 20px;
+  margin-bottom: 15px;
+}

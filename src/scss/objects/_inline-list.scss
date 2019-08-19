@@ -1,0 +1,19 @@
+// -----------------------------------------------------------------------------
+//  Objects > Inline list
+// -----------------------------------------------------------------------------
+
+.inline-list {
+  text-align: left;
+
+  &__item {
+    display: inline-block;
+    box-sizing: border-box;
+    margin-right: 7px;
+
+    &:last-child {
+      &:not(:first-child) {
+        margin-right: 0;
+      }
+    }
+  }
+}

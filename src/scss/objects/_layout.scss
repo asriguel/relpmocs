@@ -1,0 +1,39 @@
+// -----------------------------------------------------------------------------
+//  Objects > Layout
+// -----------------------------------------------------------------------------
+
+$global-layout-gap: 20px !default;
+
+.layout {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -$global-layout-gap;
+
+  @media screen and (max-width: $screen-xs-max) {
+    margin-left: 0;
+  }
+
+  &__item {
+    box-sizing: border-box;
+    flex-basis: 25%;
+    margin-bottom: 20px;
+    max-width: 25%;
+    padding-left: $global-layout-gap;
+
+    @media screen and (max-width: $screen-md-max) {
+      flex-basis: 33.33%;
+      max-width: 33.33%;
+    }
+
+    @media screen and (max-width: $screen-sm-max) {
+      flex-basis: 50%;
+      max-width: 50%;
+    }
+
+    @media screen and (max-width: $screen-xs-max) {
+      flex-basis: 100%;
+      max-width: 100%;
+      padding-left: 0;
+    }
+  }
+}

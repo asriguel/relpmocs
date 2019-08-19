@@ -1,0 +1,33 @@
+// -----------------------------------------------------------------------------
+//  Components > Button
+// -----------------------------------------------------------------------------
+
+.button {
+  color: $c-button-text;
+  font-size: $font-size-3;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &__icon {
+    align-items: center;
+    background-color: $c-button-icon-bg;
+    border-radius: 50%;
+    color: $c-button-icon;
+    display: inline-flex;
+    font-size: $font-size-2;
+    height: 24px;
+    justify-content: center;
+    width: 24px;
+    vertical-align: middle;
+
+    & + .button__text {
+      margin-left: 16px;
+    }
+  }
+
+  &__text {
+    vertical-align: middle;
+  }
+}

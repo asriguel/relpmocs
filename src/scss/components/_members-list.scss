@@ -1,0 +1,81 @@
+// -----------------------------------------------------------------------------
+//  Components > Members List
+// -----------------------------------------------------------------------------
+
+.members-list-wrapper {
+  box-sizing: border-box;
+  display: flex;
+  padding-right: 46px;
+  position: relative;
+  width: 100%;
+}
+
+.members-list {
+  padding: 20px 16px;
+
+  &__item {
+    align-items: center;
+    display: flex;
+    font-size: $font-size-3;
+    cursor: pointer;
+    width: 100%;
+
+    &:not(:first-child) {
+      padding-top: 6px;
+    }
+
+    &:not(:last-child) {
+      padding-bottom: 6px;
+    }
+
+    &--checked {
+      .members-list__image {
+        &::before {
+          background-color: $c-members-list-image-overlay;
+          content: '';
+          display: block;
+          height: 100%;
+          position: absolute;
+          width: 100%;
+          opacity: .5;
+        }
+      }
+
+      .members-list__name {
+        color: $c-members-list-name-checked;
+      }
+    }
+  }
+
+  &__image {
+    overflow: hidden;
+    position: relative;
+    margin-right: 16px;
+
+    img {
+      height: 100%;
+      object-fit: cover;
+      width: 100%;
+    }
+
+    .icon {
+      color: $c-members-list-image-icon;
+      left: 50%;
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &__name {
+    @include truncate();
+
+    color: $c-members-list-name;
+    white-space: nowrap;
+  }
+
+  &__hidden-elements-counter {
+    position: absolute;
+    right: 0;
+  }
+}

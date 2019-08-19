@@ -1,0 +1,29 @@
+// -----------------------------------------------------------------------------
+//  Settings > Breakpoints
+// -----------------------------------------------------------------------------
+//  01. Extra small screen / phone
+//  02. Small screen / tablet
+//  03. Medium screen / tablet horizontal orientation
+//  04. So media queries don't overlap when required, provide a maximum
+// -----------------------------------------------------------------------------
+
+//  01. Extra small screen / phone
+$screen-xs:                  320px;
+$screen-xs-min:              $screen-xs;
+
+//  02. Small screen / tablet
+$screen-sm:                  768px;
+$screen-sm-min:              $screen-sm;
+
+//  03. Medium screen / tablet horizontal orientation
+$screen-md:                  1024px;
+$screen-md-min:              $screen-md;
+
+//  04. Large screen / tablet horizontal orientation
+$screen-lg:                  1200px;
+$screen-lg-min:              $screen-lg;
+
+//  05. So media queries don't overlap when required, provide a maximum
+$screen-xs-max:              ($screen-sm-min - 1);
+$screen-sm-max:              ($screen-md-min - 1);
+$screen-md-max:              ($screen-lg-min - 1);

@@ -1,0 +1,16 @@
+// -----------------------------------------------------------------------------
+//  Tools > Font Face
+// -----------------------------------------------------------------------------
+
+@mixin font-face($font-family, $url, $weight: normal, $style: normal) {
+  @font-face {
+    font-family: '#{$font-family}';
+    src: url('#{$url}.eot');
+    src: url('#{$url}.eot?#iefix') format('embedded-opentype'),
+    url('#{$url}.woff') format('woff'),
+    url('#{$url}.ttf') format('truetype'),
+    url('#{$url}.svg') format('svg');
+    font-weight: $weight;
+    font-style: $style;
+  }
+}
